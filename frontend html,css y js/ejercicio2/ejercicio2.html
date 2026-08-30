@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tareas</title>
+
+    <style>
+        button{
+            background-color: rgb(7, 7, 8);
+            color: rgb(241, 236, 236);
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" id="name"name="name"requiredminlength="4"maxlength="8"size="10" />
+    <button onclick="agregarTarea()" type="button">AGREGAR</button>
+    <ul>
+        <li>limpiar</li>
+
+    </ul>
+    <script>
+        function agregarTarea() {
+        const input = document.getElementById('name');
+        const texto = input.value;
+
+        if (texto.trim() !== "") {
+            //Creamos el elemento <li>
+            const li = document.createElement('li');
+            li.textContent = texto;
+
+            //Agregamos la función para que se elimine al hacer clic
+            li.onclick = function() {
+                li.remove();
+            };
+
+            // Añadimos el <li> dentro del <ul>
+            document.querySelector('ul').appendChild(li);
+
+            //Limpiamos el campo de texto
+            input.value = '';
+        }
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+
+    <style>
+
+        label{
+            color: blue;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <label for="nombre">Nombre</label>
+
+    <input type="text" name="nombre" id="input1"/>
+
+    <label for="correo">Correo</label>
+
+    <input type="email" name="email" id="input2"/>
+
+    <button onclick="enviar()" type="button">Enviar</button>
+
+    <script>
+        function enviar(){
+         const input = document.getElementById('input1');
+         const input2 = document.getElementById('input2');
+         const texto = input.value;
+         const texto2 = input2.value;
+
+         if (texto.trim() !== "" && texto2.trim() !== "") {
+            
+            alert("Enviado");
+            //Limpiamos el campo de texto
+            input.value = '';
+            input2.value= '';
+         }
+         else{
+            alert("Error campos vacios");
+         }
+      }
+    </script>
+    
+</body>
+</html>

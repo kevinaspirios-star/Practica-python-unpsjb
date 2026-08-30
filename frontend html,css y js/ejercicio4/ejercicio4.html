@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <h1>Incremento y Decremento</h1>
+    <button onclick="decrementar()" type="button">Decrementar -</button>
+    <p id="numero">0</p>
+    <button onclick="incrementar()" type="button">Incrementar +</button>
+
+    <script>
+        function incrementar(){
+
+            let num=parseInt(document.getElementById('numero').textContent);
+
+            let nuevoValor=num +1;
+
+            document.getElementById('numero').textContent= nuevoValor;
+        }
+
+        function decrementar(){
+
+            let num=parseInt(document.getElementById('numero').textContent);
+
+            let nuevoValor=num -1;
+
+            document.getElementById('numero').textContent=nuevoValor;
+
+
+        }
+    </script>
+</body>
+</html>
